@@ -1,0 +1,27 @@
+﻿@{
+    int totalSubjects = (int)ViewBag.TotalSubjects;
+    int totalHours = (int)ViewBag.TotalHours;
+}
+
+@if (!ViewData.ModelState.IsValid)
+{
+    foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+    {
+        <p style="color:red">@error.ErrorMessage</p>
+    }
+}
+
+<form asp-action="GenerateTimeTable" method="post">
+    <p>Total Hours: <strong>@totalHours</strong></p>
+
+    @for (int i = 0; i < totalSubjects; i++)
+    {
+        <div>
+            <input name="[@i].SubjectName" placeholder="Subject Name" required />
+            <input name="[@i].Hours" placeholder="Hours" type="number" min="1" required />
+        </div>
+    }
+
+    <button type="submit">Generate</button>
+</form>
+

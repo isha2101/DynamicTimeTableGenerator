@@ -1,0 +1,15 @@
+﻿@model DynamicTimeTableGenerator.Models.InputModel
+
+<form asp-action="InputSubjects" method="post">
+    <label>Working Days (1-7):</label>
+    <input asp-for="WorkingDays" type="number" min="1" max="7" required />
+
+    <label>Subjects Per Day (1-8):</label>
+    <input asp-for="SubjectsPerDay" type="number" min="1" max="8" required />
+
+    <label>Total Subjects:</label>
+    <input asp-for="TotalSubjects" type="number" min="1" required />
+
+    <button type="submit">Submit</button>
+</form>
+

@@ -1,0 +1,44 @@
+﻿@model DynamicTimeTableGenerator.Models.TimeTableViewModel
+
+<style>
+    table {
+        border-collapse: collapse;
+        margin: 20px auto;
+        width: 60%;
+        text-align: center;
+        font-family: Arial;
+        font-size: 16px;
+    }
+
+    th, td {
+        border: 2px solid #333;
+        padding: 12px;
+    }
+
+    th {
+        background-color: #f4f4f4;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+</style>
+
+<table>
+    <tr>
+        @for (int i = 1; i <= Model.WorkingDays; i++)
+        {
+            <th>Day @i</th>
+        }
+    </tr>
+    @foreach (var row in Model.Timetable)
+    {
+        <tr>
+            @foreach (var subject in row)
+            {
+                <td>@subject</td>
+            }
+        </tr>
+    }
+</table>
+
