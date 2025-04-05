@@ -1,8 +1,6 @@
 ﻿@model DynamicTimeTableGenerator.Models.InputModel
 
 <style>
-
-
     form {
         background-color: #ffffff;
         padding: 30px 40px;
@@ -28,12 +26,11 @@
         font-size: 16px;
         transition: border-color 0.3s ease;
     }
-
-        input[type="number"]:focus {
+    input[type="number"]:focus {
             outline: none;
             border-color: #4e54c8;
             box-shadow: 0 0 0 3px rgba(78, 84, 200, 0.1);
-        }
+    }
 
     button {
         margin-top: 25px;
@@ -49,9 +46,10 @@
         transition: background 0.3s ease;
     }
 
-        button:hover {
+    button:hover {
             background: linear-gradient(to right, #3b3f9b, #6e75e3);
-        }
+    }
+
 </style>
 
 <form asp-action="InputSubjects" method="post">
