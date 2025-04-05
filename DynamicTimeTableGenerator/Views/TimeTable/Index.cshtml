@@ -1,5 +1,59 @@
 ﻿@model DynamicTimeTableGenerator.Models.InputModel
 
+<style>
+
+
+    form {
+        background-color: #ffffff;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 6px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1.5px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+    }
+
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #4e54c8;
+            box-shadow: 0 0 0 3px rgba(78, 84, 200, 0.1);
+        }
+
+    button {
+        margin-top: 25px;
+        width: 100%;
+        background: linear-gradient(to right, #4e54c8, #8f94fb);
+        color: white;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+        button:hover {
+            background: linear-gradient(to right, #3b3f9b, #6e75e3);
+        }
+</style>
+
 <form asp-action="InputSubjects" method="post">
     <label>Working Days (1-7):</label>
     <input asp-for="WorkingDays" type="number" min="1" max="7" required />

@@ -1,6 +1,6 @@
 ﻿@model DynamicTimeTableGenerator.Models.TimeTableViewModel
 
-<style>
+@* <style>
     table {
         border-collapse: collapse;
         margin: 20px auto;
@@ -22,6 +22,54 @@
     tr:nth-child(even) {
         background-color: #f9f9f9;
     }
+</style> *@
+
+<style>
+    table {
+        border-collapse: collapse;
+        margin: 30px auto;
+        width: 80%;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        table-layout: fixed;
+    }
+
+    th, td {
+        border: 2px solid #4e54c8;
+        padding: 15px;
+        word-wrap: break-word;
+    }
+
+    th {
+        background-color: #4e54c8;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    td {
+        background-color: #fdfdfd;
+        color: #333;
+    }
+
+    tr:nth-child(even) td {
+        background-color: #f0f4ff;
+    }
+
+    tr:hover td {
+        background-color: #e0eaff;
+        transition: background-color 0.3s;
+    }
+
+    caption {
+        caption-side: top;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #4e54c8;
+    }
 </style>
 
 <table>
@@ -41,4 +89,6 @@
         </tr>
     }
 </table>
+
+
 
