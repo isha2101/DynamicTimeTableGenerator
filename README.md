@@ -1,12 +1,20 @@
-# Dynamic Time Table Generator
-A .NET MVC web app that takes subjects and generates a weekly timetable based on input hours, days, and subjects.
+# Dynamic Time Table Generator 
+A simple and dynamic web application to generate a weekly timetable based on user input like working days, subjects per day, and total subjects.
 
-## Tech Stack
-- ASP.NET MVC 
-- Razor Views
+# Features
+- User inputs total subjects, working days, and periods per day
+- Dynamically assigns subject hours and generates a clean, structured timetable
+- ASP.NET MVC with strong model binding and validation
+- Modern responsive UI with clean form styling
+
+# Technologies Used
+- ASP.NET Core MVC
 - C#
+- Razor Views
+- HTML/CSS
 
-## How to Run
-1. Clone the repo
-2. Open in Visual Studio
-3. Press F5 to run
+# How to Run the Project
+1. Clone the repository
+2. Open the project in visual studio
+3. Build the Solution
+4. Run the Project
